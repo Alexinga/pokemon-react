@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-poke {
+  padding: 1rem;
+  box-shadow: 1px 2px 2px #000;
+  color: #fff;
+  background: linear-gradient(to left top, rgb(34, 142, 108), aquamarine);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.poke-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
+  text-align: center;
+  gap: 0.8rem;
 }
-
-.App-link {
-  color: #61dafb;
+.poke-box {
+  text-transform: capitalize;
+  box-shadow: 5px 2px 4px 1px aquamarine;
 }
-
-@keyframes App-logo-spin {
-  from {
+.poke-box img {
+  width: 200px;
+}
+.poke-name-bg {
+  padding: 1rem;
+  color: rgb(13, 192, 132);
+  font-weight: 700;
+}
+.btn-next {
+  margin: 1rem;
+  background: rgb(13, 192, 132);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  box-shadow: 1px 2px 2px #000;
+  cursor: pointer;
+}
+.title {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.search-item-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1500px;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  justify-items: center;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.poke-detail {
+  text-align: center;
+  position: relative;
+  /* padding: 1rem; */
+}
+.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.poke-detail img {
+  max-width: 100%;
+}
+.search-content {
+  padding: 1rem;
+}
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading {
+  border: #e3e3e3 solid 16px;
+  border-top: 16px solid aquamarine;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.error {
+  text-align: center;
+}
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
